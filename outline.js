@@ -1,4 +1,4 @@
-function Person (data) = {
+function Person (data) {
     this.name = data.name;
     this.surname = data.surname,
     this.desc = data.desc,
@@ -12,12 +12,12 @@ function Person (data) = {
     }
 }
 
-function Family (data) = {
+function Family (data) {
     this.name = data.name;
     this.desc = data.desc;
     this.members = [],
     this.currentHead = '',
-    tjos.addMember = function(person){
+    this.addMember = function(person){
         this.members.push(person);
     };
     this.influence = function(t){
