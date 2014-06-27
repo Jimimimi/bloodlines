@@ -1,0 +1,9 @@
+{
+	"name":	"family-api",
+	"main":	"api.js",
+	"dependencies": {
+		"express": "~4.0.0",
+		"somewhere": "~0.1.2",
+		"body-parser": "~1.0.1"
+	}
+}
