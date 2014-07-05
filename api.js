@@ -2,12 +2,27 @@ var express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser'),
 	db = require('somewhere'),
+	jade = require('jade'),
 	Family = require('./app/models/family'),
 	Person = require('./app/models/person');
 
-
+//=====================
 // basic setup
+//=====================
+
+// Path to our public directory
+
+var pub = __dirname + '/public';
+
+
+app.use(express.static(pub));
 app.use(bodyParser());
+
+// Set our default template engine to "jade"
+// which prevents the need for extensions
+// (although you can still mix and match)
+app.set('view engine', 'jade');
+
 db.connect('./db.json');
 var port = process.env.PORT || 8080;
 
@@ -19,6 +34,8 @@ db._save = function(collection, data, cb) {
 	db.save(collection,data);
 	cb();
 };
+
+
 
 
 // ROUTING ------------
