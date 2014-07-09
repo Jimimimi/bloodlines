@@ -1,0 +1,15 @@
+div.profile(ng-controller='FamilyCtrl as family')
+  img(ng-src='{{family.img}}')
+  h3 {{family.name}} family
+  p {{family.description}}
+  h5 Family members
+    p
+      ul.list-group
+        li.list-group-item(ng-repeat='character in family.members')
+          a(href='characters/{{character.id}}')
+            h4 {{character.fullname}}
+    
+  p
+    button.btn.btn-primary(ng-click='edit()') Edit
+    |  
+    button.btn.btn-danger(ng-click='delete()') Delete

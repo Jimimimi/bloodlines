@@ -1,0 +1,10 @@
+div.profile
+  img(ng-src='{{character.img}}')
+  h3 {{character.fullname}}
+  p {{character.description}}
+  div.relations
+    span Parents
+p
+  button.btn.btn-primary(ng-click='edit()') Edit
+  |  
+  button.btn.btn-danger(ng-click='delete()') Delete

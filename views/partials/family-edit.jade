@@ -1,0 +1,12 @@
+form.form-horizontal
+  fieldset
+    legend Edit family
+    div.col-md-6
+      div.form-group
+        label(for='name') Name:
+        input.form-control(ng-model='form.name', name = 'name')
+      div.form-group
+        label(for='description') Description
+        textarea.form-control(ng-model='form.description', cols='50', rows='10')
+      div.form-group
+        button.btn.btn-success(ng-click='editFamily()') Save changes

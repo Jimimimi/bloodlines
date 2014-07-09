@@ -1,0 +1,6 @@
+p There are {{characters.length}} characters in the database
+ul.list-group
+  li.list-group-item(ng-repeat='character in characters')
+    a(href='characters/{{character.id}}')
+      h4 {{character.fullname}}
+

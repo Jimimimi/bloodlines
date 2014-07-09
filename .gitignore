@@ -1,3 +1,4 @@
+@@ -1,244 +0,0 @@
 #################
 ## Eclipse
 #################
@@ -242,3 +243,4 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+

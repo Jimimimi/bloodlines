@@ -1,0 +1,30 @@
+doctype html
+html(ng-app="bloodlines")
+  head
+    meta(charset='utf8')
+    title= title
+    base(href='/')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/style.css')
+
+  body
+    header.navbar.navbar-static-top
+      div.navbar-header
+        a.navbar-brand(href='/') bloodlines
+          
+      nav.collapse.navbar-collapse
+        ul.nav.navbar-nav
+            li
+              a(href='/families') List Families
+              a(href='/families/add') Create a new family
+            li  
+              a(href='/characters') List Characters
+              a(href='/characters/add') Create a new character
+
+    div.container.fluid
+      div.row
+        div.col-md-3
+          block sidebar
+        div.col-md-8
+          div.well.well-sm
+            block content

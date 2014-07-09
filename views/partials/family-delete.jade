@@ -1,0 +1,7 @@
+h2 {{family.name}}
+div {{family.description}}
+p
+  | Are you sure you want to delete this family? 
+  button.btn.btn-danger(ng-click='deleteFamily()') Yes
+  |  - 
+  button.btn.btn-primary(ng-click='home()') No thanks
