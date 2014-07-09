@@ -1,0 +1,8 @@
+
+h2 {{form.name}}
+div {{form.description}}
+p
+  | Are you sure you want to delete this character? 
+  button.btn.btn-danger(ng-click='deleteCharacter()') Yes
+  |  - 
+  button.btn.btn-primary(ng-click='home()') No thanks

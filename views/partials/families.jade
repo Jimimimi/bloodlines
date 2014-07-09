@@ -1,0 +1,6 @@
+p There are {{families.length}} families in the database
+ul.list-group
+  li.list-group-item(ng-repeat='family in families') 
+    a(href='families/{{family.name}}')
+      h4 {{family.name}}
+  

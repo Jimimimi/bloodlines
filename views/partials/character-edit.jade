@@ -1,0 +1,12 @@
+form.form-horizontal
+  fieldset
+    legend Edit a person
+    div.col-md-6
+      div.form-group
+        label(for='fullname') Name:
+        input.form-control(ng-model='form.fullname', name = 'fullname')
+      div.form-group
+        label(for='description') Description
+        textarea.form-control(ng-model='form.description', cols='50', rows='10')
+      div.form-group
+        button.btn.btn-success(ng-click='editCharacter()') Save changes
